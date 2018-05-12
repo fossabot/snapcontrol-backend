@@ -1,5 +1,9 @@
 sudo: required
 dist: trusty
+sonarcloud:
+    organization: jaedle-github
+    token:
+      secure: ${SONAR_TOKEN}
 services:
 - docker
 language: go
