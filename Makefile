@@ -6,10 +6,10 @@ GOGET=$(GOCMD) get
 BINARY_NAME=snapcontrol-backend
 BINARY_PATH=./bin
 
-all: test build
+all: test build docker
 
 build:
-	$(GOBUILD) -o $(BINARY_PATH)/$(BINARY_NAME) -v
+	$(GOBUILD) -ldflags '-w -s' -a -installsuffix cgo -o $(BINARY_PATH)/$(BINARY_NAME) -v
 
 test: 
 	$(GOTEST) -v ./...
