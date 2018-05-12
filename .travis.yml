@@ -1,6 +1,7 @@
 sudo: required
 dist: trusty
-sonarcloud:
+addons:
+  sonarcloud:
     organization: jaedle-github
     token:
       secure: ${SONAR_TOKEN}
