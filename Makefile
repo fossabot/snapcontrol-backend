@@ -12,7 +12,7 @@ build:
 	$(GOBUILD) -ldflags '-w -s' -a -installsuffix cgo -o $(BINARY_PATH)/$(BINARY_NAME) -v
 
 test: 
-	$(GOTEST) -v ./...
+	$(GOTEST) -coverprofile=coverage/coverage.out -v ./...
 
 clean: 
 	$(GOCLEAN)
