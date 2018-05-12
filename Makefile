@@ -5,6 +5,8 @@ GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 BINARY_NAME=snapcontrol-backend
 BINARY_PATH=./bin
+COVERAGE_PATH=./coverage
+COERAGE_FILE=coverage.out
 
 all: test build
 
@@ -12,7 +14,8 @@ build:
 	$(GOBUILD) -ldflags '-w -s' -a -installsuffix cgo -o $(BINARY_PATH)/$(BINARY_NAME) -v
 
 test: 
-	$(GOTEST) -coverprofile=coverage/coverage.out -v ./...
+	mkdir -p $(COVERAGE_PATH)
+	$(GOTEST) -coverprofile=$(COVERAGE_PATH)/$(COERAGE_FILE) -v ./...
 
 clean: 
 	$(GOCLEAN)
