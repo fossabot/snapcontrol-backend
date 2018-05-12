@@ -9,7 +9,7 @@ install:
 - make install
 script:
 - make all
-- docker build -t jaedle:snapcontrol-backend:latest .
+- docker build -t jaedle/snapcontrol-backend:latest .
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker push jaedle/snapcontrol-backend:latest
 - sonar-scanner -Dsonar.login="$SONAR_TOKEN"
