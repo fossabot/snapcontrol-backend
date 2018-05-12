@@ -14,4 +14,8 @@
 #goland
 .idea/
 
+#binaries
 bin/
+
+#sonar
+.scannerwork
