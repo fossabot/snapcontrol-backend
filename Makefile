@@ -22,5 +22,5 @@ run:
 	$(GOBUILD) -o $(BINARY_NAME) -v ./...
 	$(BINARY_PATH)/$(BINARY_NAME)
 
-deps:
-	#$(GOGET) github.com/TBD
+install:
+	$(GOGET) -u github.com/labstack/echo/...
