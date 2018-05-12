@@ -25,3 +25,4 @@ run:
 install:
 	$(GOGET) -u github.com/labstack/echo/...
 	$(GOGET) -u github.com/stretchr/testify/assert
+	$(GOGET) -u github.com/appleboy/gofight
