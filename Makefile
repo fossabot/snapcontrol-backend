@@ -15,7 +15,7 @@ build:
 
 test: 
 	mkdir -p $(COVERAGE_PATH)
-	$(GOTEST) -coverprofile=$(COVERAGE_PATH)/$(COERAGE_FILE) -v ./...
+	$(GOTEST) -race -coverprofile=$(COVERAGE_PATH)/$(COERAGE_FILE) -v ./...
 
 clean: 
 	$(GOCLEAN)
