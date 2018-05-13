@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/appleboy/gofight"
-	"github.com/stretchr/testify/assert"
 	"github.com/labstack/echo"
+	"github.com/stretchr/testify/assert"
 	"net/http/httptest"
 	"strings"
 )
@@ -16,9 +16,9 @@ func TestEchoHelloWorld(t *testing.T) {
 
 	r.GET("/").
 		Run(setupEchoEngine(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
-		assert.Equal(t, "Hello World", r.Body.String())
-		assert.Equal(t, http.StatusOK, r.Code)
-	})
+			assert.Equal(t, "Hello World", r.Body.String())
+			assert.Equal(t, http.StatusOK, r.Code)
+		})
 }
 
 func TestHelloWorldWithoutName(t *testing.T) {
